@@ -1,0 +1,15 @@
+/* src/app/dashboard/credit/credit.component.css */
+
+mat-card {
+  margin: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.success-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}

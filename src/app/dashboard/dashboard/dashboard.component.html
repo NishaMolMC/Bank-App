@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidenav for Navigation -->
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-toolbar color="primary">Navigation</mat-toolbar>
+    <mat-nav-list>
+      <!-- Add icons for better user experience -->
+      <a mat-list-item routerLink="/dashboard/credit" routerLinkActive="active-link">
+        <mat-icon>credit_card</mat-icon>
+        <span>Credit</span>
+      </a>
+      <a mat-list-item routerLink="/dashboard/debit" routerLinkActive="active-link">
+        <mat-icon>account_balance_wallet</mat-icon>
+        <span>Debit</span>
+      </a>
+      <a mat-list-item routerLink="/dashboard/transaction-history" routerLinkActive="active-link">
+        <mat-icon>history</mat-icon>
+        <span>Transaction History</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Dashboard Content -->
+  <mat-sidenav-content class="content">
+    <mat-toolbar color="primary" class="dashboard-toolbar">
+      <span>Dashboard - Welcome, {{ userName }}</span>
+    </mat-toolbar>
+    <div class="dashboard-content">
+      <!-- This is where routed components will render -->
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

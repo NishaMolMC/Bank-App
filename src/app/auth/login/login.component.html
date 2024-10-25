@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      
+      <!-- Account Number Input Field -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Account Number</mat-label>
+        <input matInput placeholder="Enter your account number" formControlName="accountNumber" required appAutoFocus>
+        <!-- Error Message for Invalid Account Number -->
+        <mat-error *ngIf="isAccountNumberInvalid()">
+          Account number is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Password Input Field -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="'password'" placeholder="Enter your password" formControlName="password" required>
+        <!-- Error Message for Invalid Password -->
+        <mat-error *ngIf="isPasswordInvalid()">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Display General Error Message if Login Fails -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <!-- Login Button -->
+      <button mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+

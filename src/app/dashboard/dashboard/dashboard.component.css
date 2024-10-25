@@ -1,0 +1,49 @@
+
+/* Sidenav and content layout */
+.sidenav-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.content {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Dashboard toolbar */
+.dashboard-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Dashboard content */
+.dashboard-content {
+  margin-top: 20px;
+}
+
+/* Highlight active link */
+.active-link {
+  background-color: #d3d3d3;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+.mat-list-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Icons margin */
+.mat-icon {
+  margin-right: 10px;
+}
+
+.mat-drawer-container{
+  height: 500px;
+}

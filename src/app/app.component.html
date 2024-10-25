@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <span>Bank Application</span>
+  <span class="spacer"></span>
+
+  <!-- Render login/register buttons if the user is not logged in -->
+  <button *ngIf="!isLoggedIn" mat-button routerLink="/auth/login">Login</button>
+  <button *ngIf="!isLoggedIn" mat-button routerLink="/auth/register">Register</button>
+
+  <!-- Render logout button if the user is logged in -->
+  <button *ngIf="isLoggedIn" mat-button (click)="onLogout()">Logout</button>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

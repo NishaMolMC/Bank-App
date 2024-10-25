@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Debit Amount</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="debitForm" (ngSubmit)="onDebit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Account Number</mat-label>
+        <input matInput placeholder="Enter your account number" formControlName="accountNumber">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Debit Amount</mat-label>
+        <input matInput placeholder="Enter amount to debit" formControlName="debitAmount">
+      </mat-form-field>
+
+      <button mat-raised-button color="warn" type="submit">Debit</button>
+    </form>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  </mat-card-content>
+</mat-card>
